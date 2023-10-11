@@ -1,0 +1,13 @@
+.header {
+  padding: 1rem 0;
+  &__container {
+    @extend %container;
+    display: flex;
+  }
+  &__logo {
+
+  }
+  &__query {
+    margin: auto;
+  }
+}

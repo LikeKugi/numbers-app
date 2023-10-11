@@ -26,7 +26,8 @@
       "@store/*": ["./src/store/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
-      "@routes/*": ["./src/routes/*"]
+      "@routes/*": ["./src/routes/*"],
+      "@styles/*": ["./src/styles/*"]
 
     }
     },
