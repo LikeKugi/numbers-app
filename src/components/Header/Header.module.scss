@@ -1,13 +1,28 @@
 .header {
   padding: 1rem 0;
+  border-bottom: 2px solid $white100;
   &__container {
     @extend %container;
     display: flex;
   }
   &__logo {
+    max-width: max-content;
+  }
+  &__link {
+    font-size: 3rem;
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: $black800;
+    }
+    &:active {
+      color: $primary;
+    }
 
   }
   &__query {
     margin: auto;
+    flex-grow: 1;
+    text-align: center;
   }
 }

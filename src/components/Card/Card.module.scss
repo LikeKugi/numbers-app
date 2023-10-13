@@ -1,0 +1,16 @@
+.card {
+  width: 20%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  @include _950 {
+    width: 25%;
+  }
+  @include _590 {
+    width: 50%;
+  }
+  &__link {
+    text-decoration: none;
+    color: $black900;
+    text-align: center;
+  }
+}

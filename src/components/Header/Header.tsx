@@ -1,11 +1,14 @@
 import { JSX } from 'react';
 import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const Header = (): JSX.Element => {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
-        <div className="logo">logo</div>
+        <div className={styles.header__logo}>
+          <Link className={styles.header__link} to={'/'}>Numberphilia</Link>
+        </div>
         <div className={styles.header__query}>query</div>
       </div>
     </header>
