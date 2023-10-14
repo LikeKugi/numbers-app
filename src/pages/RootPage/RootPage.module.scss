@@ -3,6 +3,11 @@
   flex-direction: column;
   min-height: 100vh;
   &__content {
+    @extend %container;
+    width: 100%;
     flex-grow: 1;
+    background-color: $white;
+    border-left: 2px solid $primary100;
+    border-right: 2px solid $primary100;
   }
 }

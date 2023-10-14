@@ -5,6 +5,7 @@ import HomePage from '@pages/HomePage/HomePage';
 const routes = createHashRouter(createRoutesFromElements(
   <Route path={'/'} element={<RootPage />}>
     <Route index element={<HomePage/>} />
+    <Route path={':number'} element={<HomePage/>} />
   </Route>
 ))
 

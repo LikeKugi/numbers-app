@@ -1,12 +1,17 @@
-import { JSX } from 'react';
+import { FC, JSX } from 'react';
 import Card from '@components/Card/Card';
 import styles from './CardList.module.scss';
+import { INumbers } from '@/types/store/numbersSliseTypes';
 
-const CardList = (): JSX.Element => {
-  const cards = new Array(50).fill(5);
+interface ICardListProps {
+  numbers: INumbers,
+}
+
+const CardList: FC<ICardListProps> = ({numbers}): JSX.Element => {
+
   return (
     <div className={styles.list}>
-      {cards.map((card, idx) => <Card title={card} description={`${card} is a number`} key={idx}/>)}
+      {Object.entries(numbers).map(([number, description], idx) => <Card title={number} description={`${description} is a number`} key={idx}/>)}
     </div>
   );
 };
