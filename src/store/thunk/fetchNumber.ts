@@ -6,9 +6,9 @@ interface IPayloadObj {
   signal: AbortSignal,
 }
 
-export const fetchNumbers = createAsyncThunk(
-  'numbers/fetchNumbers',
-  async ({queryArg, signal}:IPayloadObj, thunkAPI) => {
+export const fetchNumber = createAsyncThunk(
+  'number/fetchNumber',
+  async ({queryArg, signal}: IPayloadObj, thunkAPI) => {
     try {
       const res = await axios.get(`http://numbersapi.com/${queryArg}` ,{
         signal
@@ -19,4 +19,4 @@ export const fetchNumbers = createAsyncThunk(
       return thunkAPI.rejectWithValue(err.message)
     }
   }
-);
+)

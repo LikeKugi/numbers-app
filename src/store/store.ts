@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { NumbersReducer } from '@store/slices/numbersSlice';
+import { RootReducer } from '@store/slices/RootReducer';
 
 export const store = configureStore({
-  reducer: {
-    numbers: NumbersReducer
-  }
+  reducer: RootReducer,
 });
 
 

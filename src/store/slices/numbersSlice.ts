@@ -20,6 +20,7 @@ export const numbersSlice = createSlice({
       state.numbers = action.payload;
     },
     [fetchNumbers.pending.type]: (state) => {
+      state.error = '';
       state.isLoading = true;
     },
     [fetchNumbers.rejected.type]: (state, action: PayloadAction<string>) => {
@@ -29,8 +30,8 @@ export const numbersSlice = createSlice({
   }
 })
 
-export const selectIsLoading = (state: RootState) => state.numbers.isLoading;
-export const selectError = (state: RootState) => state.numbers.error;
+export const selectIsLoadingNumbers = (state: RootState) => state.numbers.isLoading;
+export const selectErrorNumbers = (state: RootState) => state.numbers.error;
 export const selectNumbers = (state: RootState) => state.numbers.numbers;
 
 export const NumbersReducer = numbersSlice.reducer;
