@@ -1,0 +1,41 @@
+.pagination {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+  @include _590 {
+    flex-direction: column-reverse;
+  }
+  &__btn {
+    background-color: $white300;
+    color: $black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover {
+      background-color: $white400;
+    }
+    &:active {
+      background-color: $black;
+      color: $white300;
+    }
+  }
+  &__form {
+    padding: 0.5rem 1rem;
+    position: relative;
+    border-radius: 1rem;
+    border: 1px solid $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &__input {
+    max-width: 3rem;
+  }
+}

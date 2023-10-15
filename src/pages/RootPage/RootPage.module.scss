@@ -5,6 +5,7 @@
   &__content {
     @extend %container;
     width: 100%;
+    padding: 3rem 0;
     flex-grow: 1;
     background-color: $white;
     border-left: 2px solid $primary100;

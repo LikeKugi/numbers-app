@@ -9,7 +9,6 @@ const Header = (): JSX.Element => {
         <div className={styles.header__logo}>
           <Link className={styles.header__link} to={'/'}>Numberphilia</Link>
         </div>
-        <div className={styles.header__query}>query</div>
       </div>
     </header>
   );
