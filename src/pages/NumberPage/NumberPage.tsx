@@ -1,12 +1,14 @@
 import { JSX, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@store/store';
 import { selectErrorNumber, selectIsLoadingNumber, selectNumber } from '@store/slices/numberSlice';
 import { fetchNumber } from '@store/thunk/fetchNumber';
 import { selectQueryType } from '@store/slices/querySlice';
+import styles from './NumberPage.module.scss';
 
 const NumberPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const title = useParams().number as string;
   const queryType = useAppSelector(selectQueryType);
@@ -32,8 +34,12 @@ const NumberPage = (): JSX.Element => {
   }
 
   return (
-    <div>
-      <h1>{JSON.stringify(number)}</h1>
+    <div className={styles.number}>
+      <h1 className={styles.number__title}>{title}</h1>
+      <div className={styles.number__box}>
+        <p className={styles.number__text}>{`${number}`}</p>
+        <button className={styles.number__btn} onClick={() => navigate('/')}>Back</button>
+      </div>
     </div>
   );
 };

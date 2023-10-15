@@ -1,0 +1,69 @@
+.number {
+  display: flex;
+  flex-direction: row;
+  @include _590 {
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 20rem;
+    text-align: center;
+    flex-grow: 1;
+    color: $primary;
+    @include _950 {
+      font-size: 15rem;
+    }
+    @include _590 {
+      font-size: 10rem;
+    }
+  }
+
+  &__box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 60%;
+    @include _590 {
+      max-width: 100%;
+      gap: 2rem;
+    }
+  }
+
+  &__text {
+    color: $black800;
+    font-size: 2.5rem;
+    @include _950 {
+      font-size: 2rem;
+    }
+    @include _590 {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__btn {
+    max-width: max-content;
+    align-self: center;
+    display: block;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: 2px solid $black500;
+    color: $black;
+    cursor: pointer;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out;
+    @include _590 {
+      max-width: 100%;
+      align-self: normal;
+    }
+
+    &:hover {
+      background-color: $white200;
+    }
+
+    &:active {
+      background-color: $black;
+      color: $white200;
+    }
+  }
+}

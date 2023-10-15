@@ -45,16 +45,16 @@ const NumberForm = (): JSX.Element => {
     <form className={styles.form} onSubmit={formSubmitHandler}>
       <div className={styles.form__actions}>
         <button className={`${styles.form__btn} ${activeType === 'trivia' ? styles.active : ''}`}
-                onClick={() => activeTypeHandler('trivia')}>Trivia
+                onClick={() => activeTypeHandler('trivia')} type={'button'}>Trivia
         </button>
         <button className={`${styles.form__btn} ${activeType === 'math' ? styles.active : ''}`}
-                onClick={() => activeTypeHandler('math')}>Math
+                onClick={() => activeTypeHandler('math')} type={'button'}>Math
         </button>
         <button className={`${styles.form__btn} ${activeType === 'year' ? styles.active : ''}`}
-                onClick={() => activeTypeHandler('year')}>Year
+                onClick={() => activeTypeHandler('year')} type={'button'}>Year
         </button>
         <button className={`${styles.form__btn} ${activeType === 'date' ? styles.active : ''}`}
-                onClick={() => activeTypeHandler('date')}>Date
+                onClick={() => activeTypeHandler('date')} type={'button'}>Date
         </button>
       </div>
       <label className={styles.form__label} htmlFor={inputId}>Learn about number: </label>

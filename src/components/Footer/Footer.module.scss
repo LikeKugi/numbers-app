@@ -20,6 +20,12 @@
     &:not(:last-of-type) {
       margin-right: 2rem;
     }
+    @include _590 {
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
   &__link {
     text-decoration: none;
