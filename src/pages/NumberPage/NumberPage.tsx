@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '@store/store';
 import { selectErrorNumber, selectIsLoadingNumber, selectNumber } from '@store/slices/numberSlice';
 import { fetchNumber } from '@store/thunk/fetchNumber';
+import { selectQueryType } from '@store/slices/querySlice';
 
 const NumberPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const title = useParams().number as string;
+  const queryType = useAppSelector(selectQueryType);
   const number = useAppSelector(selectNumber);
   const isLoading = useAppSelector(selectIsLoadingNumber);
   const errorMsg = useAppSelector(selectErrorNumber);
@@ -15,11 +17,11 @@ const NumberPage = (): JSX.Element => {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-    dispatch(fetchNumber({queryArg: title, signal}));
+    dispatch(fetchNumber({queryArg: `${title}/${queryType}`, signal}));
     return () => {
       controller.abort()
     }
-  }, [dispatch, title])
+  }, [dispatch, title, queryType])
 
   if (isLoading) {
     return <p>Loading...</p>

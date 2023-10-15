@@ -5,6 +5,7 @@ import { selectErrorNumbers, selectIsLoadingNumbers, selectNumbers } from '@stor
 import { fetchNumbers } from '@store/thunk/fetchNumbers';
 import { selectQueryInitialNumber, selectMaxNumbers } from '@store/slices/querySlice';
 import Pagination from '@components/Pagination/Pagination';
+import NumberForm from '@components/NumberForm/NumberForm';
 
 const HomePage = (): JSX.Element => {
   const isLoading = useAppSelector(selectIsLoadingNumbers);
@@ -34,6 +35,7 @@ const HomePage = (): JSX.Element => {
 
   return (
     <>
+      <NumberForm />
       <CardList numbers={numbers}/>
       <Pagination/>
     </>

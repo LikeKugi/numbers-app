@@ -9,9 +9,16 @@
     width: 50%;
   }
   &__link {
+    display: block;
+    padding: 0.5rem;
     text-decoration: none;
     color: inherit;
     text-align: center;
+    transition: background-color 0.3s ease-out;
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: $primary100;
+    }
   }
   &__title {
     margin-bottom: 1.5rem;
