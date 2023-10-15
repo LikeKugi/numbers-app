@@ -9,7 +9,18 @@
 - Redux/ReduxToolKit. Асинхронные экшены Redux-thunk или Redux-saga
 - Работа с API с помощью клиента Axios (можно использовать любое открытое API, либо свой вариант)
 - Адаптивность - приложение должно корректно выглядеть на всех типах устройств (mobile, tablet, desktop, retina)
-- Деплой приложения (gh-pages, vercel, heroku.com, fly.io).
+- Деплой приложения.
 
 
 ## Дизайн, верстка и функциональная часть оставляем на ваш выбор.
+
+## Реализация
+
+- Стек React 18 + TypeScript
+- Vite
+- Функциональные компоненты
+- Модульные стили
+- react-router-dom
+- ReduxToolKit
+- Axios, asyncThunk
+- API - [Numbers API](http://numbersapi.com/)
